@@ -1,0 +1,183 @@
+# https://releases.llvm.org/15.0.0/tools/clang/docs/ClangFormatStyleOptions.html
+
+Language: Cpp
+
+AccessModifierOffset: -4
+
+AlignArrayOfStructures: Right
+AlignEscapedNewlines: Right
+AlignAfterOpenBracket: Align
+AlignConsecutiveAssignments: None  # candidate for modification
+AlignConsecutiveDeclarations:  # candidate for modification
+  Enabled: false
+AlignOperands: Align
+AlignTrailingComments: Never
+
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: false
+
+AllowShortBlocksOnASingleLine: Never
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortIfStatementsOnASingleLine: false
+AllowShortLoopsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: InlineOnly
+AllowShortLambdasOnASingleLine: Inline
+
+AlwaysBreakAfterDefinitionReturnType: None
+AlwaysBreakAfterReturnType: None
+AlwaysBreakBeforeMultilineStrings: false
+AlwaysBreakTemplateDeclarations: Yes
+
+BinPackArguments: false
+BinPackParameters: false
+BitFieldColonSpacing: After
+
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass:             false
+  AfterCaseLabel:         false
+  AfterControlStatement:  Never
+  AfterEnum:              false
+  AfterFunction:          false
+  AfterNamespace:         false
+  AfterObjCDeclaration:   false
+  AfterStruct:            false
+  AfterUnion:             false
+  AfterExternBlock:       false
+  BeforeCatch:            true
+  BeforeElse:             true
+  BeforeLambdaBody:       false
+  BeforeWhile:            false
+  IndentBraces:           false
+  SplitEmptyFunction:     false
+  SplitEmptyRecord:       false
+  SplitEmptyNamespace:    false
+
+# BreakAfterAttributes: Leave  ##clang-format 16
+BreakAfterJavaFieldAnnotations: false
+# BreakArrays: false  ##clang-format 16
+
+BreakBeforeBinaryOperators: None
+BreakBeforeConceptDeclarations: Always  # sync with AlwaysBreakTemplateDeclarations
+BreakBeforeTernaryOperators: false
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+BreakStringLiterals: true
+BreakBeforeInheritanceComma: false  # don't see in the docs anymore
+BreakConstructorInitializersBeforeComma: false  # don't see in the docs anymore
+
+ColumnLimit: 100
+CommentPragmas:  '^ IWYU pragma:'
+CompactNamespaces: false
+
+ConstructorInitializerAllOnOneLineOrOnePerLine: false  # deprecated, see CurrentLine of PackConstructorInitializers
+ConstructorInitializerIndentWidth: 0
+ContinuationIndentWidth: 4
+
+Cpp11BracedListStyle: false
+DerivePointerAlignment: false
+DisableFormat: false
+
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: Always
+
+ExperimentalAutoDetectBinPacking: false
+FixNamespaceComments: true
+
+ForEachMacros:
+  - foreach
+  - Q_FOREACH
+  - BOOST_FOREACH
+
+IncludeBlocks: Preserve
+# IncludeCategories
+# IncludeIsMainRegex
+# IncludeIsMainSourceRegex
+
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExternBlock: NoIndent
+IndentGotoLabels: false
+IndentPPDirectives: BeforeHash
+IndentRequiresClause: true
+IndentWidth: 4
+IndentWrappedFunctionNames: false
+
+InsertBraces: true
+InsertTrailingCommas: None
+
+JavaScriptQuotes: Double
+JavaScriptWrapImports: false
+
+KeepEmptyLinesAtTheStartOfBlocks: true  # candidate for modification
+LambdaBodyIndentation: Signature
+
+# MacroBlockBegin: ''
+# MacroBlockEnd: ''
+
+MaxEmptyLinesToKeep: 1
+NamespaceIndentation: None
+
+ObjCBinPackProtocolList: Auto
+ObjCBlockIndentWidth: 4
+ObjCBreakBeforeNestedBlockParam: false
+ObjCSpaceAfterProperty: false
+ObjCSpaceBeforeProtocolList: true
+
+PPIndentWidth: -1
+
+PackConstructorInitializers: Never
+
+PenaltyBreakAssignment: 2
+PenaltyBreakBeforeFirstCallParameter: 19
+PenaltyBreakFirstLessLess: 3
+PenaltyBreakComment: 300
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 1000000
+PenaltyReturnTypeOnItsOwnLine: 60
+
+PointerAlignment: Left
+
+QualifierAlignment: Custom
+QualifierOrder: ['inline', 'static', 'const', 'type']
+
+ReferenceAlignment: Left  # sync with PointerAlignment
+ReflowComments: true
+RemoveSemicolon: true
+RemoveBracesLLVM: false  # looks like counterpart to InsertBraces
+RequiresClausePosition: WithPreceding
+SeparateDefinitionBlocks: Leave
+ShortNamespaceLines: 4
+
+SortIncludes: CaseInsensitive
+SortJavaStaticImport: Before
+SortUsingDeclarations: true  # candidate for modification
+
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: false
+SpaceBeforeCtorInitializerColon: false
+SpaceBeforeInheritanceColon: true
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: Never  # candidate for modification
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: true
+SpacesInParentheses: false
+SpacesInSquareBrackets: false
+
+Standard: c++20
+
+TabWidth: 4
+UseCRLF: true
+UseTab: Never

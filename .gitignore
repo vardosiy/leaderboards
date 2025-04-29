@@ -1,0 +1,16 @@
+# IDE
+.vs/
+.vscode/
+.idea/
+
+# generated
+bin/
+lib/
+build/
+cmake-build-debug/
+Autogen.cmake
+
+# python generated
+__pycache__/
+scripts/python/__pycache__/
+*.pyc

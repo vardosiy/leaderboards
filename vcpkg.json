@@ -1,0 +1,9 @@
+{
+    "name": "leaderboards",
+    "version-string": "0.1.0",
+    "dependencies": [
+        "gtest",
+        "libpqxx",
+        "drogon"
+    ]
+}
