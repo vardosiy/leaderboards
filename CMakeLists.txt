@@ -11,11 +11,17 @@ else()
     add_compile_options(-Wall -Wextra -Wpedantic -Wno-c++17-extensions)
 endif()
 
+
 # ------------------------------------------------------------------------------
 
 add_executable(
         main_app
         src/main.cpp)
+
+find_package(libpqxx CONFIG REQUIRED)
+find_package(Drogon CONFIG REQUIRED)
+target_link_libraries(main_app PRIVATE libpqxx::pqxx)
+target_link_libraries(main_app PRIVATE Drogon::Drogon)
 
 # ------------------------------------------------------------------------------
 
