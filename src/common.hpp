@@ -2,22 +2,9 @@
 
 #include <cstdint>
 #include <string>
+#include <optional>
 
 namespace lb {
-
-using EntryId = int64_t;
-using UserId = std::string;
-using LeaderboardId = std::string;
-using Score = uint64_t;
-using Timestamp = uint64_t;
-
-struct Entry {
-    EntryId id;
-    UserId user_id;
-    Score score;
-    Timestamp ts;
-};
-
 
 enum class Ordering {
     Ascending,
@@ -26,13 +13,30 @@ enum class Ordering {
 inline std::string_view to_string(const Ordering& ordering) {
     return "";
 }
+inline std::optional<Ordering> from_string(std::string_view str) {
+    return Ordering::Descending;
+}
 
-struct Leaderboard {
-    explicit Leaderboard(Ordering ordering)
-    : ordering(ordering) {}
+using LeaderboardId = uint64_t;
+using UserId = std::string;
+using Score = uint64_t;
+using Timestamp = uint64_t;
 
-    Ordering ordering;
-    std::vector<Entry> entries;
+struct Entry {
+    LeaderboardId lb_id;
+    UserId user_id;
+    Score score;
+    Timestamp ts;
 };
+
+// struct Leaderboard {
+//     explicit Leaderboard(Ordering ordering)
+//     : ordering(ordering) {}
+//
+//     LeaderboardId id;
+//     std::string name;
+//     Ordering ordering;
+//     std::vector<Entry> entries;
+// };
 
 }  // namespace lb
