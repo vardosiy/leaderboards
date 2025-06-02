@@ -136,7 +136,7 @@ PenaltyBreakComment: 300
 PenaltyBreakString: 1000
 PenaltyBreakTemplateDeclaration: 10
 PenaltyExcessCharacter: 1000000
-PenaltyReturnTypeOnItsOwnLine: 60
+PenaltyReturnTypeOnItsOwnLine: 80
 
 PointerAlignment: Left
 
